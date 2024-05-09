@@ -1,3 +1,3 @@
 # Java-interbiew-questions
 
-Here, in this repository i will write the code fo FAQ in java interviews.
+Here, in this repository i will write the code of FAQ in java interviews.

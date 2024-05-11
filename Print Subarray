@@ -1,13 +1,20 @@
+// Write a program in java  to print subarrays ? 
+
 // for ex main array is int arr[]={1,2,3}
 // output :  1 12 123 
 // 2 23 
 // 3 
 
+
+// Program to print the subarrays including sum and  count of the subarrays 
 public class Print_subarrays {
     
     public static int sub_array(int arr[])
     {
         int count=0;
+        int sum=0;
+        int largest=0;
+
         for(int i=0;i<arr.length;i++)
         {
            
@@ -16,17 +23,66 @@ public class Print_subarrays {
                 for(int k=i;k<=j;k++)
                 {
                     System.out.print(arr[k]);
+                    sum=sum+arr[k];
+                    if(largest<sum)
+                    {
+                        largest=sum;
+                    }
                 }
                 count++;
-                System.out.println();
+                System.out.println(" Sum : "+sum);
+                sum=0;
+               
             }
             System.out.println();
         }
         System.out.println("Total Subarrays : "+count); //printing total subarrays count
+        System.out.println("Largest sum of Subarray is : "+largest);
         return 0;
     }
     public static void main(String[] args) {
-        int arr[]={1,2,3,4,5,6};
+        int arr[]={1,2,3,4,5,6,8};
         sub_array(arr);
     }
 }
+
+// if you don't want to print the sum and total number of arrays simply comment out the print statement 
+/*  output ---
+1 Sum : 1
+12 Sum : 3
+123 Sum : 6
+1234 Sum : 10
+12345 Sum : 15
+123456 Sum : 21
+1234568 Sum : 29
+
+2 Sum : 2
+23 Sum : 5
+234 Sum : 9
+2345 Sum : 14
+23456 Sum : 20
+234568 Sum : 28
+
+3 Sum : 3
+34 Sum : 7
+345 Sum : 12
+3456 Sum : 18
+34568 Sum : 26
+
+4 Sum : 4
+45 Sum : 9
+456 Sum : 15
+4568 Sum : 23
+
+5 Sum : 5
+56 Sum : 11
+568 Sum : 19
+
+6 Sum : 6
+68 Sum : 14
+
+8 Sum : 8
+
+Total Subarrays : 28
+Largest sum of Subarray is : 29
+*/

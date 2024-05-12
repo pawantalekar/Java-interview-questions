@@ -1,1 +1,26 @@
-// super keyword is used to pass the value from the child class constructso
+// super keyword is used to pass the value from the child class constructor to the parent class constructor 
+// because we cannot create the object of the parent class and hence can't pass the value to the parametarized constructor ..To achieve this thing we use super keyword 
+
+class a {
+    a(int x) {
+        System.out.println("In super class constructor x : " + x);
+    }
+}
+
+class b extends a {
+    b(int y) {
+        // passing value to the superclass constructor using super keyword
+        super(y);
+        System.out.println("In child class y : " + y);
+    }
+}
+
+public class This_super {
+    public static void main(String[] args) {
+        b obj = new b(5);
+    }
+}
+
+// output - 
+// In super class constructor x : 5
+// In child class y : 5

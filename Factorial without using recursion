@@ -1,4 +1,17 @@
 /*
  factorial without using recursion can be achieved by using loop or by iterating 
-
+ so in this file we are going to write the code to find factorial without using the recursion 
 */
+public class Factorial_without_recursion {
+
+    public static void main(String[] args) {
+        int num = 5;
+        int facto = 1;
+        for (int i = 1; i <= num; i++) {
+            facto *= i;
+        }
+        System.out.println("Factorial of "+num+" : "+facto);
+    }
+
+}
+// output - 120 

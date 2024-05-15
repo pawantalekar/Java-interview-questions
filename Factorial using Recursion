@@ -1,0 +1,30 @@
+// Here  i have written the code to find the factorial using the recursion 
+// Recursion - A functon call itself 
+// Here to take a input i have used the BufferedReader class by creating the object and passing the InputStreamReader class object as a parameter/argument..
+// factorial of 5 would be 5*4*3*2*1 i.e n*fact(n-1) (Note : here n is the number whose factorial we finding.) 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+           
+public class Recursion {
+
+    static int fact(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * fact(n - 1);
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        // int result = fact(5);
+        // System.out.println(result);
+
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader bf = new BufferedReader(in);
+        System.out.println("Enter number  : ");
+        int n = Integer.parseInt(bf.readLine());
+        System.out.println("Factorial of " + n + ": " + fact(n));
+    }
+}

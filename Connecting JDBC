@@ -1,1 +1,12 @@
+//There are 7 steps to Build  JDBC connection
+/*
+ 1) Import Packages 
+ 2) Load the Driver
+ 3) Register the Druver with DriverManager 
+ 4) Create Connection Object 
+ 5) write a query
+ 6) Execute a query
+ 7) Close the Connection
 
+
+*/

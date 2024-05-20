@@ -2,7 +2,6 @@
 The ArmStrong Number means the sum of the all the digit of the number should be equal to the number 
 for ex- 153 is a number then 1*1*1 + 5*5*5 + 3*3*3 = 153 
 
-
 */
 
 public class ArmStrong_number {

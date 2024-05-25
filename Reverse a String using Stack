@@ -1,0 +1,40 @@
+/*
+  Here , will take one String as a input and convert it into the Character array 
+and storing that character values into the stack and retriving it ..
+---> Stack follows LIFO i.e Last in First out 
+ex. input = "aboli"
+    output would be : iloba
+
+*/
+
+package stack;
+
+import java.util.Stack;
+
+class ReverseString{
+	public static void reverse(String input) {
+		
+		Stack<Character> stack = new Stack<Character>();
+
+		//
+		for(char ch:input.toCharArray()) {
+			stack.push(ch);
+		}
+		
+		//just popping the element so that pop method will return the topmost element and we will print that element simultaneously 
+		while(!stack.empty())
+		{
+			Character str = stack.pop();
+			System.out.print(str);
+		}
+	}
+}
+public class ReversesdStringUsingStack {
+
+	public static void main(String[] args) {
+		String str="pawan";
+		ReverseString.reverse(str);
+
+	}
+
+}

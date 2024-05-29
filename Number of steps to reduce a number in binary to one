@@ -37,3 +37,45 @@ s consists of characters '0' or '1'
 s[0] == '1'
 */
 
+
+package leetCode;
+
+import java.math.BigInteger;
+
+class Solution {
+	public int numSteps(String s) {	
+		 //i  Converted the binary string to a BigInteger because using int got numberFormatException
+        BigInteger num = new BigInteger(s, 2);
+        //count variable to count the steps
+        int count = 0;
+
+        // checking condition While num is greater than 1
+        while (num.compareTo(BigInteger.ONE) > 0) {         //while(num>1)
+
+        //checking if the num is even or odd
+            if (num.mod(BigInteger.TWO).equals(BigInteger.ZERO)) {  // while(num%2=0)
+
+                // If num is found  even, divided by 2
+                num = num.divide(BigInteger.TWO);
+
+            } else {
+                // If num is found  odd then add 1
+                num = num.add(BigInteger.ONE);
+            }
+            count++;
+		}
+		System.out.println(count);
+		return count;
+    }
+}
+
+public class Step_to_Binary_Representation {
+
+	public static void main(String[] args) {
+
+		Solution obj = new Solution();
+		obj.numSteps("1111011110000011100000110001011011110010111001010111110001");
+	}
+
+}
+

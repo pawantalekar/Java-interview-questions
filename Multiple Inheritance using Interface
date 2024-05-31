@@ -1,1 +1,33 @@
+/*
+  By extending two classes multiple inheritance is not supported by the java,
+  hence we used interface as the alternative to achieve the multiple inheritance in the java,
+  by implementing two or more interfaces at a time...
+*/
+package inheritance;
 
+interface I1 {
+	public void m1();
+}
+
+interface I2 {
+	public void m1();
+}
+class Test1 implements I1,I2{
+
+	@Override
+	public void m1() {
+		System.out.println("Multiple Inheritance Achieved Successfully! ");
+		
+	}
+
+	
+}
+public class Multiple_Inheritance {
+
+	public static void main(String[] args) {
+		Test1 obj = new Test1();
+	
+		obj.m1();
+	}
+
+}

@@ -1,0 +1,31 @@
+/*
+Method Oveloading - same method name but differenet parameters 
+for ex- public void show()
+        public void show(String name)
+
+*/
+
+package Task;
+class Demo{
+	public void add()
+	{
+		int a=9,b=10;
+		int sum=a+b;
+		System.out.println(sum);
+	}
+	public void add(int a,int b)
+	{
+		int sum=a+b;
+		System.out.println(sum);
+	}
+}
+public class A_02_Method_overloading {
+
+	public static void main(String[] args) {
+		Demo obj = new Demo();
+		obj.add();
+		obj.add(5, 6);
+
+	}
+
+}

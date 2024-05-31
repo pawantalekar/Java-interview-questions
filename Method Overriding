@@ -1,0 +1,42 @@
+/*
+Method Overriding - same method signature i.e same method name and sime number of parameters
+for ex - public void display() // in parent class
+         public void display() // in child class 
+
+  method will call according to the which class object we create 
+if parent class object is created - parent class method can be get called 
+if child class object is created - child class method can be get called 
+parent reference and child class object is created then child class method can be called
+
+*/
+
+
+package Task;
+
+class Parent{
+	public void display()
+	{
+		System.out.println("Parent class display method! ");
+	}
+}
+class Child extends Parent{
+	public void display()
+	{
+		System.out.println("Child class display method! ");
+	}
+}
+public class A_03_Method_overriding {
+
+	public static void main(String[] args) {
+		
+		Parent obj = new Parent();
+		obj.display();
+		
+		Child obj1 = new Child();
+		obj1.display();
+		
+		Parent ref = new Child();
+		ref.display();
+	}
+
+}

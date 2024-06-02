@@ -7,8 +7,6 @@
  5) write a query
  6) Execute a query
  7) Close the Connection
-
-
 */
 package JDBC;
 

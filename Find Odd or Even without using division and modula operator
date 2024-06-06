@@ -2,5 +2,31 @@
 Without using / % operator we can find the odd or even in following way..
 1) by converting integer to the binary string and checking the string endsWith(0) or not 
 2) by checking the value at the last index of the string binaryString.charAt(lastIndex);
-
 */
+
+package practice;
+
+public class Int_to_Binay {
+
+	public static void main(String[] args) {
+		int num = 30;
+		String binaryString = Integer.toBinaryString(num);
+		System.out.println("Binary of  " + num + " is: " + binaryString);
+		boolean result = binaryString.endsWith("0");
+//		System.out.println(len);
+		
+		if(result==true)
+			System.out.println("The no is Even ");
+		else
+			System.out.println(" no is odd ");
+
+//		int len=binaryString.length();	
+//		if (binaryString.charAt(len) == 0) {
+//			System.out.println("No is even : ");
+//		} else {
+//			System.out.println("The given no is odd ");
+//		}
+	}
+
+}
+
